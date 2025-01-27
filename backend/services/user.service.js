@@ -69,7 +69,7 @@ const updateUserById = async (userId, userData) => {
   if (userData.password) {
     userData.password = await bcrypt.hash(
       userData.password,
-      c ROUNDS
+      10
     );
   }
 
